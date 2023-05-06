@@ -6,7 +6,7 @@
     <groupId>org.springframework</groupId>
     <artifactId>helloworld</artifactId>
     <version>1.0.1</version>
-    <name>helloworld</name>
+    
     </parent>
 
     <!-- tag::joda[] -->
