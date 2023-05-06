@@ -24,7 +24,7 @@ node{
                 [
                     artifactId: 'jb-hello-world-maven',
               classifier: '',
-              file: 'target/jb-hello-world-maven-1.0.1.jar', 
+              file: 'target/jb-hello-world-maven-${readPomVersion}.jar', 
               type: 'jar'
                 ]
             ], 
