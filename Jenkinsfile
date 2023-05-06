@@ -11,5 +11,11 @@ node{
     stage('maven install'){
         sh 'mvn clean install'
     }
+    stage('qualityanalysis'){
+        withSonarQubeEnv(credentialsId: 'sonarid') {
+         sh 'mvn clean package sonar:sonar'
+}
+        
+    }
    
 }
