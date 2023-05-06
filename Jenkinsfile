@@ -34,7 +34,7 @@ node{
             nexusVersion: 'nexus3',
             protocol: 'http', 
             repository: 'project-1', 
-            version: '${readPomVersion}'
+            version: '${readPomVersion.version}'
     }
    
 }
