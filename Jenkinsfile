@@ -5,5 +5,8 @@ node{
     stage('maven test'){
         sh 'mvn test'
     }
+    stage('maven integrate'){
+        sh 'mvn verify -DskipunitTest'
+    }
    
 }
