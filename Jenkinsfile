@@ -11,7 +11,7 @@ node{
                 [
                     artifactId: 'jb-hello-world-maven',
               classifier: '',
-              file: 'target/jb-hello-world-maven.jar', 
+              file: 'target/jb-hello-world-maven-0.2.0.jar', 
               type: 'jar'
                 ]
             ], 
