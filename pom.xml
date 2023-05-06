@@ -36,6 +36,7 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                            <finalname>helloworld.jar</finalname>
                             <transformers>
                                 <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
