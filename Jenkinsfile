@@ -22,7 +22,7 @@ node{
         nexusArtifactUploader artifacts: 
             [
                 [
-                    artifactId: 'jb-hello-world-maven',
+                    artifactId: 'helloworld',
               classifier: '',
               file: 'target/helloworld', 
               type: 'jar'
