@@ -29,7 +29,7 @@ node{
             ], 
             credentialsId: 'nexusid',
             groupId: 'org.springframework', 
-            nexusUrl: '43.206.110.148:8081/', 
+            nexusUrl: '54.65.233.83:8081', 
             nexusVersion: 'nexus3',
             protocol: 'http', 
             repository: 'project-1', 
