@@ -24,7 +24,7 @@
        <!-- end::joda[] -->
        
     <build>
-        <finalName>helloworld.jar</finalName>
+        <finalName>helloworld</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
