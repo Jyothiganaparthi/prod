@@ -8,5 +8,8 @@ node{
     stage('maven integrate'){
         sh 'mvn verify -DskipunitTest'
     }
+    stage('maven install'){
+        sh 'mvn clean install'
+    }
    
 }
