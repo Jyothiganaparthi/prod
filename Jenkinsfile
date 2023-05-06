@@ -18,6 +18,7 @@ node{
         
     }
     stage('nexus'){
+        def readPomVersion = readMavenPom file: 'pom.xml'
         nexusArtifactUploader artifacts: 
             [
                 [
@@ -33,7 +34,7 @@ node{
             nexusVersion: 'nexus3',
             protocol: 'http', 
             repository: 'project-1', 
-            version: '0.2.0'
+            version: '${readPomVersion}'
     }
    
 }
