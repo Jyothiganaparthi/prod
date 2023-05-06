@@ -1,23 +1,38 @@
-node{
+pipeline{
+    agentany
+    stages{
     stage('gitcheckout'){
+        steps{
         git branch: 'main', credentialsId: 'github', url: 'https://github.com/Jyothiganaparthi/prod.git'
+        }
     }
     stage('maven test'){
+        steps{
         sh 'mvn test'
+        }
     }
     stage('maven integrate'){
+        steps{
         sh 'mvn verify -DskipunitTest'
+        }
     }
     stage('maven install'){
+        steps{
         sh 'mvn clean install'
+        }
     }
     stage('qualityanalysis'){
+        steps{
+            script{
         withSonarQubeEnv(credentialsId: 'sonarid') {
          sh 'mvn clean package sonar:sonar'
 }
-        
+            }
+        }
     }
     stage('nexus'){
+        steps{
+            script{
         def readPomVersion=readMavenPom file: 'pom.xml'
         nexusArtifactUploader artifacts: 
             [
@@ -36,5 +51,8 @@ node{
             repository: 'project-1', 
             version: '${readPomVersion.version}'
     }
+        }
+    }
    
+}
 }
