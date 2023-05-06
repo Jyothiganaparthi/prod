@@ -24,7 +24,7 @@ node{
                 [
                     artifactId: 'helloworld',
               classifier: '',
-              file: 'target/helloworld', 
+              file: 'target/helloworld.jar', 
               type: 'jar'
                 ]
             ], 
