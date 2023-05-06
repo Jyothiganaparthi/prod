@@ -18,7 +18,7 @@ node{
         
     }
     stage('qualitygate'){
-       waitForQualityGate abortPipeline: false, credentialsId: 'sonarid' 
+       waitForQualityGate abortPipeline: true, credentialsId: 'sonarid' 
     }
    
 }
