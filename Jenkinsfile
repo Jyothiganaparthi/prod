@@ -45,7 +45,7 @@ pipeline{
             ], 
             credentialsId: 'nexusid',
             groupId: 'org.springframework', 
-            nexusUrl: '54.65.233.83:8081', 
+            nexusUrl: '18.183.158.253:8081', 
             nexusVersion: 'nexus3',
             protocol: 'http', 
             repository: 'project-1', 
