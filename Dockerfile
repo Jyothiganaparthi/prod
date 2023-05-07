@@ -1,4 +1,5 @@
 FROM maven as build
+RUN apt-get update
 WORKDIR /app
 COPY . /app
 RUN mvn install
