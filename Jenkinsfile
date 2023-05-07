@@ -55,7 +55,9 @@ pipeline{
     }
         stage{
             steps{
+                script{
                 sh 'docker build -t image1 .'
+                }
             }
         }
    
