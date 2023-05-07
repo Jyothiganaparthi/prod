@@ -1,9 +1,9 @@
-FROM maven as Build
+FROM maven as build
 WORKDIR /app
-copy . /app
+COPY . /app
 RUN mvn clean install
 
 FROM openjdk:11
 WORKDIR /app
-copy --from=Build /app/target/*.jar /app/
+COPY --from=build /app/target/*.jar /app/
 CMD ["java","-jar","helloworld.jar"]
